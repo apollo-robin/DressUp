@@ -1,6 +1,10 @@
 import firebase_admin
 from firebase_admin import credentials, initialize_app
 from LibUserFunctions import *
+from PIL import Image
+
+favicon = Image.open("favicon.jpg")
+st.set_page_config( page_title="DressUp", page_icon=favicon)
 
 # Initialize App if not already
 if not firebase_admin._apps:
