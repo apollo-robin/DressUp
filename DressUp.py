@@ -2,16 +2,14 @@ import firebase_admin
 from firebase_admin import credentials, initialize_app
 from LibUserFunctions import *
 from PIL import Image
-from google.oauth2 import service_account
 
 favicon = Image.open("favicon.jpg")
 st.set_page_config( page_title="DressUp", page_icon=favicon)
 
 # Initialize App if not already
 if not firebase_admin._apps:
-    key = json.loads(st.secrets.service_account_key)
-    creds = service_account.Credentials.from_service_account_info(key)
-    initialize_app(creds, {'storageBucket': 'dressup-2eeb0.appspot.com'})
+    cred = credentials.Certificate("dressup-2eeb0-5f6a92426646.json")
+    initialize_app(cred, {'storageBucket': 'dressup-2eeb0.appspot.com'})
 
 
 st.markdown(f'<p style= "font-weight: bold; text-align:center; font-family:Courier; font-size:48px">'
