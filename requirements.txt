@@ -14,3 +14,5 @@ rembg==2.0.53
 requests==2.31.0
 streamlit==1.30.0
 streamlit-cropperjs==0.0.8
+streamlit-extras==0.4.0
+
