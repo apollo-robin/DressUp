@@ -1,5 +1,8 @@
 from LibUploadFunctions import *
 
+favicon = Image.open("favicon.jpg")
+st.set_page_config( page_title="DressUp - Wardrobe", page_icon=favicon)
+
 st.markdown(f'<p style= "font-weight: bold; text-align:center; font-family:Courier; font-size:48px">'
             'Dress Up'
             ' <p>',

@@ -2,6 +2,9 @@ from streamlit_cropperjs import st_cropperjs
 from LibUploadFunctions import *
 from time import sleep
 
+favicon = Image.open("favicon.jpg")
+st.set_page_config( page_title="DressUp - Add Outfit", page_icon=favicon)
+
 st.markdown(f'<p style= "font-weight: bold; text-align:center; font-family:Courier; font-size:48px">'
             'Dress Up'
             ' <p>',
